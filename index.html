@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>RockITMART</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href='http://fonts.googleapis.com/css?family=Special+Elite|Fredoka+One' rel='stylesheet' type='text/css'>
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="allContent">
+	<header>
+		<nav><i class="fa fa-bars"></i></nav>
+		<h1>RockITMART</h1>
+	</header>
+	<div class="navigator">
+		<p>			
+		<a href="/">Home</a>
+		</p>
+		<p>			
+		<a href="about.html">About Us</a>
+		</p>
+		<p>			
+		<a href="locations.html">Locations</a>
+		</p>
+	</div>
+	<div class="content">
+		<aside class="cart">
+		<fieldset><legend>Cart</legend>
+			<div><button class="clearCart">Clear Cart</button>
+			<button class="checkoutButton disabled">Checkout</button></div>
+			<div class="cartItems">
+<!-- Cart Template area -->
+				<script id="cartTemplate" type="x-handlebars-template">
+				{{#each this}}
+					<div class="cartItem">				
+						<img class="itemImage" src="{{image}} ">
+						<div class="{{sku}} ">
+							<div class="cartSku">{{sku}}</div>
+							<div class="itemName">{{name}}</div>
+							<div class="itemPrice">${{price}}</div>
+							<div class="quantityOrdered">{{quantityOrdered}}</div>
+							<div class="subtotal">Subtotal: {{subtotal}} </div>
+							<button class="reduceItem">Remove 1</button>
+							<button class="removeItem">X</button>
+						</div>
+					</div>
+				{{/each}}
+				</script>
+<!-- Ene of Cart Template -->
+				</div> 
+			</div>
+		</fieldset>
+		</aside>
+		<div class="content">
+			<fieldset class="catalog"><legend>Catalog</legend>
+				<div class="catalogSelectorDiv">
+					<input type="text" placeholder="Search">
+					<i class="fa fa-search"></i>
+					<select name="catalogSelector" id="catalogSelector">
+						<option value="all">All Categories</option>
+					</select></div>
+				<div class="catalogItems">
+<!-- Template section -->
+					<script id="catalogTemplate" type="text/x-handlebars-template">
+					{{#each this}}
+					<div class="catalogItem">
+						<img class="itemImage" src="{{thumbnail}} ">
+						<div class="{{sku}}" >
+							<div class="catalogSku">{{sku}}</div>
+							<div class="itemName">{{name}} </div>
+							<div class="itemDescription">{{description}} </div>
+							<div class="itemPrice">${{price}}</div>
+							<button class="addItem">Add to Cart</button>
+						</div>	
+					</div> 
+					{{/each}}
+					</script>
+				</div>
+			</fieldset>
+		</div>
+		<div class="blur">				
+		</div>
+		<div class="preview">
+			<div class="previewButton"><button>X</button></div>
+			<div class="previewImage"><img></div>
+		</div>
+		<div class="checkout">
+			<fieldset class="checkoutField">
+			<legend>Checkout</legend>	
+			<form action="confirm.php" method="POST">
+				<label>Subtotal: </label>
+				<input type="text" name="orderSubtotal" class="orderSubtotal">
+				<label>Tax: </label>
+				<input type="text" name="orderTax" class="orderTax">&nbsp;
+				<label>Total Due: $</label>
+				<input type="text" name="orderTotal" class="orderTotal"><br>
+				<input type="text" name="firstName" placeholder="First Name">
+				<input type="text" name="lastName" placeholder="Last Name">
+				<input type="text" name="email" placeholder="Email"><br>
+				<input type="radio" name="cardType" value="visa">Visa&nbsp;
+				<input type="radio" name="cardType" value="mastercard">MasterCard&nbsp;
+				<input type="radio" name="cardType" value="bitcoin">Bitcoin&nbsp;
+				<input type="text" name="cardNumber" placeholder="Card Number">
+				<button type="submit" class="submitButton">Submit</button>
+			</form>
+				<button class="continueShopping">Continue Shopping</button>
+				<button class="cancelOrder">Cancel Order</button>
+
+			</fieldset>
+		</div>
+	</div>
+	<footer>
+		<p>&copy;rlarsen4</p>
+	</footer>
+</div>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="handlebars-v1.3.0.js"></script>
+<script type="text/javascript" src="productList.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>

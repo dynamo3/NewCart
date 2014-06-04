@@ -1,0 +1,205 @@
+.allContent {
+	width: 75%;
+	margin: auto;
+	position: relative;
+}
+
+header {
+	background-color: #990000;
+	color: white;
+	border-radius: 5px;
+}
+
+nav {
+	float: right;
+	height: 75px;
+	width: 75px;
+	font-size: 3em;
+	color: #FFF;
+	text-align: center;
+}
+header h1 {
+	text-align: center;
+	font-family: "Fredoka One";
+	font-size: 3em;
+}
+
+.navigator {
+	background-color: #990000;
+	border-radius: 5px;
+	width: 400px;
+	position: absolute;
+	right: 0px;
+	z-index: 999;
+	text-align: right;
+	display: none;
+	padding: 10px;
+}
+
+.navigator a {
+	color: #fff;
+}
+.mainOrder {
+	overflow: hidden;
+	clear: both;
+	position: relative;
+}
+
+fieldset {
+	border-radius: 5px;
+	min-height: 140px;
+	font-family: "Fredoka One";
+}
+
+aside {
+	float: left;
+	min-width: 300px;
+	position: relative;
+}
+.catalog {
+	margin-left: 300px;
+}
+.itemName {
+	text-decoration: underline;
+	font-size: 1.2em;
+	padding-top: 5px;
+}
+
+.itemImage {
+	width: 50px;
+	height: 50px;
+	float: left;
+}
+
+.cartItem, .catalogItem {
+	overflow: hidden;
+	position: relative;
+	background-color: #ccc;
+	margin: 10px;
+	padding: 5px;
+	border-radius: 8px;
+	clear: both;
+}
+
+.checkoutButton {
+	float: right;
+}
+
+.disabled {
+	display: none;
+}
+
+div.catalogSelectorDiv:after {
+	content: " ";
+	display: block;
+	clear: both;
+}
+
+#catalogSelector {
+	display: inline;
+	float: right;
+	background-color: #990000;
+	color: white;
+}
+
+.catalogTemplate {
+	margin-top: 20px;
+}
+
+.itemImage {
+	border-radius: 5px;
+	border: 1px solid #000;
+	margin-right: 10px;
+}
+.catalogItemData {
+	border-radius: 5px;
+	padding-left: 5px;
+	margin-left: 50px;
+}
+
+.cartSku, .catalogSku {
+	display: inline;
+	float: right;
+	font-family: sans-serif;
+	font-style: italic;
+	font-variant: small-caps;
+}	
+
+.itemDescription {
+	font-family: sans-serif;
+	font-style: italic;
+}
+
+.itemPrice, .subtotal {
+	font-family: sans-serif;
+}
+
+.removeItem, .reduceItem, .addItem {
+	float: right;
+}
+
+.preview {
+	min-height: 300px;
+	min-width: 300px;
+	border-radius: 5px;
+	background-color: #990000;
+	position: absolute;
+	left: 50%;
+	margin-left: -150px;
+	top: 100px;
+	display: none;
+	z-index: 1000;
+	opacity: 1;
+}
+
+.blur {
+	min-height: 100%;
+	min-width: 100%;
+	background-color: #eee;
+	opacity: .8;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 999;
+}
+.previewButton {
+	overflow: hidden;
+	clear: both;
+}
+.preview button {
+	float: right;
+}
+
+.previewImage {
+	position: relative;
+}
+.preview img {
+	min-width: 250px;
+	min-height: 250px;
+	display: block;
+	margin: auto;
+}
+
+.checkout {
+	display: none;
+	font-family: sans-serif;
+}
+label {
+	font-family: sans-serif;
+}
+
+.orderSubtotal, .orderTax, .orderTotal {
+	width: 80px;
+}
+
+footer {
+	text-align: center;
+	font-size: small;
+}
+
+button {
+	border-radius: 5px;
+	background-color: #990000;
+	color: #fff;
+}
